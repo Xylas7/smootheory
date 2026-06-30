@@ -1,371 +1,199 @@
 <!DOCTYPE html>
-<!-- saved from url=(0034)https://smootheory.kleap.io/#visit -->
-<html lang="en" dir="ltr" class="lenis"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="referrer" content="same-origin"><title>SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai</title><meta name="description" content="SmooTheory is Navi Mumbai&#39;s most aesthetic smoothie, bowl and waffle café in Kopar Khairane. Fresh blends, picture-perfect bowls, and chill vibes — open daily."><link rel="canonical" href="https://smootheory.kleap.io/"><meta name="robots" content="index,follow"><link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin=""><link href="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/css2" rel="stylesheet"><link rel="icon" href="https://smootheory.kleap.io/favicon.svg" type="image/svg+xml"><link rel="icon" href="https://smootheory.kleap.io/favicon-32.png" sizes="32x32" type="image/png"><link rel="apple-touch-icon" href="https://smootheory.kleap.io/apple-touch-icon.png"><link rel="manifest" href="https://smootheory.kleap.io/site.webmanifest"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/ClientRouter.astro_astro_type_script_index_0_lang.CDGfc0hd.js.download" data-astro-exec=""></script><script data-astro-exec="">
-      document.addEventListener("astro:page-load", function () {
-        // 🛟 REVEAL FAILSAFE (runs ALWAYS, even reduced-motion). Scroll-reveals on
-        // ABOVE-THE-FOLD content — especially the hero — frequently never fire:
-        // ScrollTrigger waits for the element to scroll INTO view, but an already-
-        // visible hero never does, so its [data-reveal] wrapper stays opacity:0 and
-        // the first screen ships BLANK. After giving GSAP a beat to play, force any
-        // still-hidden [data-reveal] that sits in the initial viewport to appear.
-        // Only touches at/above-the-fold elements → below-fold reveals still animate.
-        function revealFailsafe() {
-          var vh = window.innerHeight || 800;
-          document.querySelectorAll("[data-reveal]").forEach(function (el) {
-            var r = el.getBoundingClientRect();
-            if (r.top < vh * 1.05 && parseFloat(getComputedStyle(el).opacity) < 0.1) {
-              el.style.transition = "opacity .5s ease, transform .5s ease";
-              el.style.opacity = "1";
-              el.style.transform = "none";
-            }
-          });
-        }
-        setTimeout(revealFailsafe, 1400);
-        window.addEventListener("load", function () { setTimeout(revealFailsafe, 700); });
+<html lang="en" dir="ltr" class="lenis">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="same-origin">
+    <title>SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai</title>
+    <meta name="description" content="SmooTheory is Navi Mumbai's most aesthetic smoothie, bowl and waffle café in Kopar Khairane. Fresh blends, picture-perfect bowls, and chill vibes — open daily.">
+    
+    <!-- LIVE STYLESHEETS & FONTS (No folder needed) -->
+    <link rel="stylesheet" href="https://smootheory.kleap.io/_astro/index.DZ3FLm5v.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    
+    <meta property="og:title" content="SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai">
+    <meta property="og:description" content="SmooTheory is Navi Mumbai's most aesthetic smoothie, bowl and waffle café in Kopar Khairane. Fresh blends, picture-perfect bowls, and chill vibes — open daily.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smootheory.kleap.io/">
+</head> 
+<body class="min-h-screen bg-background text-foreground antialiased">
 
-        // 🛟 BELOW-THE-FOLD reveal backstop (runs ALWAYS, even reduced-motion).
-        // The above failsafe only rescues elements already in the first viewport.
-        // BELOW-fold [data-reveal] wrappers depend on the generator's GSAP/ScrollTrigger
-        // firing as they scroll into view — but when ScrollTrigger silently fails
-        // (Lenis desync, not loaded, wrong trigger) those sections stay at
-        // opacity:0 FOREVER, so whole sections (testimonials, pricing, feature
-        // bento) ship INVISIBLE and the page looks broken/empty. This
-        // IntersectionObserver reveals any still-hidden [data-reveal] as it
-        // enters view, independent of GSAP. The 550ms grace gives GSAP first
-        // crack (so working reveals still animate); we only force-show what's
-        // still hidden after that. unobserve after first hit = zero ongoing cost.
-        if ("IntersectionObserver" in window) {
-          var io = new IntersectionObserver(function (entries) {
-            entries.forEach(function (e) {
-              if (!e.isIntersecting) return;
-              var el = e.target;
-              io.unobserve(el);
-              setTimeout(function () {
-                if (parseFloat(getComputedStyle(el).opacity) < 0.1) {
-                  el.style.transition = "opacity .6s ease, transform .6s ease";
-                  el.style.opacity = "1";
-                  el.style.transform = "none";
-                }
-              }, 550);
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[var(--background)]/70 border-b border-[var(--border)]"> 
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"> 
+            <a href="#" class="flex items-center gap-2"> 
+                <span class="w-8 h-8 rounded-full bg-gradient-to-br from-[var(--brand)] to-[var(--accent-color)] flex items-center justify-center text-[var(--background)] font-black">S</span> 
+                <span class="font-black text-xl tracking-tight text-[var(--foreground)]">Smoo<span class="text-[var(--accent-color)]">Theory</span></span> 
+            </a> 
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[var(--foreground)]"> 
+                <a href="#menu" class="hover:text-[var(--accent-color)] transition">Menu</a> 
+                <a href="#story" class="hover:text-[var(--accent-color)] transition">Story</a> 
+                <a href="#visit" class="hover:text-[var(--accent-color)] transition">Visit</a> 
+            </nav> 
+            <a href="tel:+919136877407" class="hidden md:inline-block px-4 py-2 rounded-full bg-emerald-500 text-white text-sm font-bold hover:scale-105 transition">Call to Order</a> 
+            <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu"> 
+                <span class="w-6 h-0.5 bg-[var(--foreground)] transition-all"></span> 
+                <span class="w-6 h-0.5 bg-[var(--foreground)] transition-all"></span> 
+                <span class="w-6 h-0.5 bg-[var(--foreground)] transition-all"></span> 
+            </button> 
+        </div> 
+        <div id="mobile-menu" class="md:hidden hidden border-t border-[var(--border)] bg-[var(--background)]/95 backdrop-blur-xl"> 
+            <nav class="flex flex-col px-6 py-4 gap-4 text-base font-medium text-[var(--foreground)]"> 
+                <a href="#menu" class="mobile-link hover:text-[var(--accent-color)] transition">Menu</a> 
+                <a href="#story" class="mobile-link hover:text-[var(--accent-color)] transition">Story</a> 
+                <a href="#visit" class="mobile-link hover:text-[var(--accent-color)] transition">Visit</a> 
+                <a href="tel:+919136877407" class="mobile-link px-4 py-2 rounded-full bg-emerald-500 text-white text-center font-bold">Call to Order</a> 
+            </nav> 
+        </div> 
+    </header> 
+
+    <main class="pt-16">  
+        <section class="relative overflow-hidden min-h-[90vh] flex items-center" data-reveal=""> 
+            <div class="absolute inset-0 bg-gradient-to-br from-[var(--brand-dark)] via-[var(--background)] to-[var(--background)]"></div> 
+            <div class="absolute -top-20 -right-20 w-96 h-96 bg-[var(--brand)]/30 rounded-full blur-3xl"></div> 
+            <div class="absolute bottom-0 -left-20 w-96 h-96 bg-[var(--accent-color)]/20 rounded-full blur-3xl"></div> 
+            <div class="relative max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center"> 
+                <div> 
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur border border-white/20 mb-6"> 
+                        <span class="w-2 h-2 rounded-full bg-[var(--accent-color)] animate-pulse"></span> 
+                        <span class="text-xs font-bold text-white uppercase tracking-widest">Now Open · Kopar Khairane</span> 
+                    </div> 
+                    <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-[var(--foreground)] leading-[0.95]"> Chill.<br>Blend.<br><span class="text-[var(--accent-color)]">Repeat.</span> </h1> 
+                    <p class="mt-6 text-lg md:text-xl text-white/80 max-w-lg leading-relaxed"> Navi Mumbai's most aesthetic spot for hand-crafted smoothies, picture-perfect bowls, and the city's best strawberry coffee. </p> 
+                    <div class="mt-8 flex flex-wrap gap-4"> 
+                        <a href="#menu" class="px-7 py-4 rounded-full bg-emerald-500 text-white font-bold hover:scale-105 transition shadow-lg shadow-emerald-500/20"> See the Menu </a> 
+                        <a href="#visit" class="px-7 py-4 rounded-full border border-[var(--border)] bg-[var(--card)] text-[var(--foreground)] font-bold hover:bg-[var(--secondary)] transition"> Find Us </a> 
+                    </div> 
+                    <div class="mt-10 flex gap-8 text-sm"> 
+                        <div> <div class="text-2xl font-black text-[var(--foreground)]">4.8★</div> <div class="text-[var(--muted-foreground)]">Google Rating</div> </div> 
+                        <div> <div class="text-2xl font-black text-[var(--foreground)]">30+</div> <div class="text-[var(--muted-foreground)]">Signature Blends</div> </div> 
+                        <div> <div class="text-2xl font-black text-[var(--foreground)]">100%</div> <div class="text-[var(--muted-foreground)]">Real Fruit</div> </div> 
+                    </div> 
+                </div> 
+                <div class="relative"> 
+                    <div class="aspect-square rounded-[3rem] overflow-hidden bg-gradient-to-br from-[var(--brand)] to-[var(--accent-color)] p-2 shadow-2xl"> 
+                        <img src="https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?auto=format&fit=crop&w=600&q=80" alt="Colorful smoothie bowl" class="w-full h-full object-cover rounded-[2.6rem]"> 
+                    </div> 
+                    <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl p-4 shadow-2xl"> 
+                        <div class="text-xs text-gray-500 uppercase tracking-widest font-bold">Today's Pick</div> 
+                        <div class="font-black text-lg text-gray-900">Strawberry Coffee</div> 
+                        <div class="text-sm text-emerald-600 font-bold">★ Customer Fave</div> 
+                    </div> 
+                    <div class="absolute -top-4 -left-4 w-24 h-24 rounded-full bg-emerald-400 flex items-center justify-center text-white font-black text-sm shadow-xl rotate-12"> FRESH<br>DAILY </div> 
+                </div> 
+            </div> 
+        </section>  
+
+        <section id="menu" class="py-24 md:py-32 px-6" data-reveal=""> 
+            <div class="max-w-7xl mx-auto"> 
+                <div class="text-center mb-16"> 
+                    <p class="text-[var(--accent-color)] font-bold uppercase tracking-widest text-sm mb-3">Our Menu</p> 
+                    <h2 class="text-5xl md:text-7xl font-black tracking-tighter text-[var(--foreground)]">Made to glow.</h2> 
+                    <p class="mt-4 text-[var(--muted-foreground)] max-w-2xl mx-auto">Real fruit. Honest ingredients. Every cup and bowl blended fresh, the moment you order.</p> 
+                </div> 
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5"> 
+                    <article class="group bg-[var(--card)] border border-[var(--border)] rounded-3xl overflow-hidden hover:scale-[1.02] transition"> 
+                        <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&w=500&q=80" alt="Smoothies" class="w-full h-44 object-cover"> 
+                        <div class="p-6"> <h3 class="text-xl font-black text-[var(--foreground)] mb-1">Smoothies</h3> <p class="text-sm text-[var(--muted-foreground)]">Tropical, berry, avocado-honey-date — blended thick &amp; icy.</p> <div class="mt-4 text-[var(--accent-color)] font-bold">From ₹149 →</div> </div> 
+                    </article> 
+                    <article class="group bg-[var(--card)] border border-[var(--border)] rounded-3xl overflow-hidden hover:scale-[1.02] transition"> 
+                        <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&w=500&q=80" alt="Smoothie Bowls" class="w-full h-44 object-cover"> 
+                        <div class="p-6"> <h3 class="text-xl font-black text-[var(--foreground)] mb-1">Smoothie Bowls</h3> <p class="text-sm text-[var(--muted-foreground)]">Granola, seeds, fresh fruit, cacao — the gram-worthy plate.</p> <div class="mt-4 text-[var(--accent-color)] font-bold">From ₹229 →</div> </div> 
+                    </article> 
+                    <article class="group bg-[var(--card)] border border-[var(--border)] rounded-3xl overflow-hidden hover:scale-[1.02] transition"> 
+                        <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=500&q=80" alt="Coffee" class="w-full h-44 object-cover"> 
+                        <div class="p-6"> <h3 class="text-xl font-black text-[var(--foreground)] mb-1">Coffee &amp; More</h3> <p class="text-sm text-[var(--muted-foreground)]">From iced strawberry coffee to classic cold brews &amp; shakes.</p> <div class="mt-4 text-[var(--accent-color)] font-bold">From ₹99 →</div> </div> 
+                    </article> 
+                    <article class="group bg-[var(--card)] border border-[var(--border)] rounded-3xl overflow-hidden hover:scale-[1.02] transition"> 
+                        <img src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=500&q=80" alt="Waffles" class="w-full h-44 object-cover"> 
+                        <div class="p-6"> <h3 class="text-xl font-black text-[var(--foreground)] mb-1">Waffles &amp; Treats</h3> <p class="text-sm text-[var(--muted-foreground)]">Crispy Belgian waffles, donuts and protein-packed bites.</p> <div class="mt-4 text-[var(--accent-color)] font-bold">From ₹179 →</div> </div> 
+                    </article> 
+                </div> 
+            </div> 
+        </section>  
+
+        <section id="story" class="py-24 md:py-32 px-6 bg-[var(--card)]" data-reveal=""> 
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"> 
+                <div class="rounded-3xl overflow-hidden aspect-square"> 
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=600&q=80" alt="Inside café" class="w-full h-full object-cover"> 
+                </div> 
+                <div> 
+                    <p class="text-[var(--accent-color)] font-bold uppercase tracking-widest text-sm mb-3">Why SmooTheory</p> 
+                    <h2 class="text-4xl md:text-6xl font-black tracking-tighter text-[var(--foreground)] mb-6">Navi Mumbai's most aesthetic café — and it tastes as good as it looks.</h2> 
+                    <p class="text-[var(--muted-foreground)] leading-relaxed mb-6"> We started SmooTheory with one belief: healthy food shouldn't be boring, and pretty food shouldn't taste like nothing. Every smoothie is blended to order with whole fruits, real nut butters, and zero syrup shortcuts. </p> 
+                    <ul class="space-y-3"> 
+                        <li class="flex items-center gap-3 text-[var(--foreground)]"> <span class="w-6 h-6 rounded-full bg-[var(--accent-color)] flex items-center justify-center text-[var(--accent-foreground)] text-xs font-black">✓</span> Farm-fresh fruit, no concentrates </li>
+                        <li class="flex items-center gap-3 text-[var(--foreground)]"> <span class="w-6 h-6 rounded-full bg-[var(--accent-color)] flex items-center justify-center text-[var(--accent-foreground)] text-xs font-black">✓</span> Hand-topped bowls, never pre-made </li>
+                        <li class="flex items-center gap-3 text-[var(--foreground)]"> <span class="w-6 h-6 rounded-full bg-[var(--accent-color)] flex items-center justify-center text-[var(--accent-foreground)] text-xs font-black">✓</span> Cozy interiors built for hangouts </li>
+                    </ul> 
+                </div> 
+            </div> 
+        </section>  
+
+        <section id="visit" class="py-24 md:py-32 px-6" data-reveal=""> 
+            <div class="max-w-5xl mx-auto bg-gradient-to-br from-[var(--brand)] to-[var(--brand-dark)] rounded-[3rem] p-10 md:p-16 relative overflow-hidden"> 
+                <div class="absolute top-0 right-0 w-72 h-72 bg-[var(--accent-color)]/30 rounded-full blur-3xl"></div> 
+                <div class="relative grid md:grid-cols-2 gap-10 items-center"> 
+                    <div> 
+                        <p class="text-[var(--foreground)] font-bold uppercase tracking-widest text-sm mb-3">Come Say Hi</p> 
+                        <h2 class="text-4xl md:text-6xl font-black tracking-tighter text-white mb-6">Find us in Kopar Khairane.</h2> 
+                        <div class="space-y-4 text-white/90"> 
+                            <div class="flex items-start gap-3"> <span class="text-xl">📍</span> <div><strong>Fam Society</strong><br>Kopar Khairane<br>Navi Mumbai, Maharashtra 400709</div> </div> 
+                            <div class="flex items-center gap-3"> <span class="text-xl">📞</span> <a href="tel:+919136877407" class="font-bold hover:text-[var(--accent-color)] transition">+91 91368 77407</a> </div> 
+                        </div> 
+                        <div class="mt-8 flex flex-wrap gap-3"> 
+                            <a href="https://www.zomato.com/mumbai/smooTheory" target="_blank" class="px-5 py-3 rounded-full bg-white text-[#047857] font-bold text-sm hover:scale-105 transition">Order on Zomato →</a> 
+                        </div> 
+                    </div> 
+                    <div class="rounded-3xl overflow-hidden aspect-square border-4 border-white/10"> 
+                        <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=600&q=80" alt="Healthy café vibes" class="w-full h-full object-cover"> 
+                    </div> 
+                </div> 
+            </div> 
+        </section> 
+
+        <footer class="border-t border-[var(--border)] py-10 px-6"> 
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"> 
+                <div class="flex items-center gap-2"> 
+                    <span class="w-7 h-7 rounded-full bg-gradient-to-br from-[var(--brand)] to-[var(--accent-color)] flex items-center justify-center text-[var(--background)] font-black text-xs">S</span> 
+                    <span class="font-black text-[var(--foreground)]">SmooTheory</span> 
+                </div> 
+                <div class="text-[var(--muted-foreground)] text-sm">© 2026 SmooTheory · Kopar Khairane, Navi Mumbai</div> 
+            </div> 
+        </footer> 
+    </main>
+
+    <!-- INTERACTION & ANIMATION SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+    
+    <script>
+        // Smooth Scrolling (Lenis)
+        const lenis = new Lenis({ lerp: 0.1 });
+        function raf(t) { lenis.raf(t); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+
+        // Mobile Menu Toggle
+        var toggle = document.getElementById("menu-toggle");
+        var menu = document.getElementById("mobile-menu");
+        if (toggle && menu) {
+            toggle.addEventListener("click", function () { menu.classList.toggle("hidden"); });
+            document.querySelectorAll(".mobile-link").forEach(function (link) {
+                link.addEventListener("click", function () { menu.classList.add("hidden"); });
             });
-          }, { rootMargin: "0px 0px -8% 0px" });
-          document.querySelectorAll("[data-reveal]").forEach(function (el) { io.observe(el); });
         }
 
-        // 🛟 FAIL-OPEN SWEEP (last resort, runs ALWAYS). The generator often animates
-        // reveals via ad-hoc GSAP selectors (gsap.from(".card",{opacity:0}),
-        // a stagger on ".testimonial") with NO [data-reveal] marker — so when
-        // ScrollTrigger desyncs, those cards/sections stay opacity:0 and ship
-        // INVISIBLE even though the content is fully in the DOM (a real, common
-        // "site looks broken/empty" report). 2.8s after load, force-show ANY
-        // element still stuck at opacity:0 that has real content — while leaving
-        // genuinely-hidden UI (modals, dropdowns, tooltips, display:none) alone.
-        function failOpenSweep() {
-          var nodes = document.querySelectorAll("main *, section, section *, footer *, [data-reveal]");
-          for (var i = 0; i < nodes.length; i++) {
-            var el = nodes[i];
-            var cs = getComputedStyle(el);
-            if (parseFloat(cs.opacity) >= 0.1) continue;
-            if (cs.display === "none" || cs.visibility === "hidden") continue;
-            if (el.closest("[hidden],[aria-hidden='true'],[role='dialog'],[role='menu'],[role='tooltip'],[role='listbox'],.modal,dialog:not([open]),details:not([open])")) continue;
-            var r = el.getBoundingClientRect();
-            if (r.width < 8 || r.height < 8) continue;
-            if (!(el.textContent || "").trim() && !el.querySelector("img,svg,video,canvas,picture")) continue;
-            el.style.transition = "opacity .5s ease, transform .5s ease";
-            el.style.opacity = "1";
-            el.style.transform = "none";
-          }
-        }
-        setTimeout(failOpenSweep, 2800);
-        window.addEventListener("load", function () { setTimeout(failOpenSweep, 3200); });
-
-        if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-        function init() {
-          if (window.__lenis) { try { window.__lenis.destroy(); } catch (e) {} }
-          var l = new window.Lenis({ lerp: 0.1 });
-          window.__lenis = l;
-          function raf(t) { l.raf(t); requestAnimationFrame(raf); }
-          requestAnimationFrame(raf);
-          // 🔗 Sync Lenis → ScrollTrigger. WITHOUT this, ScrollTrigger never sees
-          // Lenis's smooth scroll, so EVERY scroll-reveal stays at opacity:0 and the
-          // page content is invisible (root cause of the empty section). ScrollTrigger
-          // is loaded by the generator's motion block and may arrive AFTER Lenis, so the
-          // handler re-checks each scroll instead of binding to it once.
-          l.on("scroll", function () { if (window.ScrollTrigger) window.ScrollTrigger.update(); });
-          if (window.ScrollTrigger) window.ScrollTrigger.refresh();
-        }
-        if (window.Lenis) { init(); }
-        else {
-          var s = document.createElement("script");
-          s.src = "https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js";
-          s.onload = init;
-          document.head.appendChild(s);
-        }
-      });
-    </script><script data-astro-exec="">
-      (function () {
-        function placeholder(img) {
-          if (img.dataset.kfx) return;
-          img.dataset.kfx = "1";
-          img.removeAttribute("src");
-          img.removeAttribute("srcset");
-          img.style.background =
-            "linear-gradient(135deg, var(--surface, #e9e4dc), var(--accent-color, var(--accent, #b9a48a)))";
-          img.style.objectFit = "cover";
-          if (!img.getAttribute("width") && !img.style.minHeight)
-            img.style.minHeight = "200px";
-        }
-        document.addEventListener(
-          "error",
-          function (e) {
-            var t = e.target;
-            if (t && t.tagName === "IMG") placeholder(t);
-          },
-          true,
-        );
-        function sweep() {
-          document.querySelectorAll("img").forEach(function (img) {
-            if (img.complete && img.naturalWidth === 0 && img.getAttribute("src"))
-              placeholder(img);
-          });
-        }
-        document.addEventListener("DOMContentLoaded", sweep);
-        document.addEventListener("astro:page-load", sweep);
-        addEventListener("load", sweep);
-      })();
-    </script><script data-astro-exec="">
-      (function () {
-        var ID = "kleap-mobile-menu";
-        function openMenu() {
-          var m = document.getElementById(ID);
-          if (!m) return;
-          m.style.display = "block";
-          m.removeAttribute("hidden");
-          document.documentElement.style.overflow = "hidden";
-        }
-        function closeMenu() {
-          var m = document.getElementById(ID);
-          if (!m) return;
-          m.style.display = "none";
-          m.setAttribute("hidden", "");
-          document.documentElement.style.overflow = "";
-        }
-        function collectLinks(scope) {
-          var links = [], seen = {};
-          scope.querySelectorAll("a[href]").forEach(function (a) {
-            var href = a.getAttribute("href");
-            var label = (a.textContent || "").replace(/\s+/g, " ").trim();
-            if (!href || href.charAt(0) === "#") return;
-            if (!label || label.length < 2) return; // skip logo / icon-only links
-            if (a.querySelector("img, svg") && label.length < 3) return;
-            var key = href + "|" + label.toLowerCase();
-            if (seen[key]) return;
-            seen[key] = 1;
-            links.push({ href: href, label: label });
-          });
-          return links;
-        }
-        function navScope() {
-          // header>nav is the usual nav bar, but some sites leave it empty and put
-          // the links directly in <header> (or only have a bare <nav>). Pick the
-          // first scope that yields a real menu (>=2 links).
-          var cands = [
-            document.querySelector("header nav"),
-            document.querySelector("nav"),
-            document.querySelector("header"),
-          ];
-          for (var i = 0; i < cands.length; i++) {
-            if (cands[i] && collectLinks(cands[i]).length >= 2) return cands[i];
-          }
-          return null;
-        }
-        function navLinks() {
-          var s = navScope();
-          return s ? collectLinks(s) : [];
-        }
-        function ensureDrawer() {
-          var links = navLinks();
-          if (links.length < 2) return false;
-          var old = document.getElementById(ID);
-          if (old) old.remove();
-          var ov = document.createElement("div");
-          ov.id = ID;
-          ov.setAttribute("hidden", "");
-          ov.style.cssText = "position:fixed;inset:0;z-index:2147483600;display:none;";
-          var back = document.createElement("div");
-          back.style.cssText = "position:absolute;inset:0;background:rgba(0,0,0,.55);";
-          back.addEventListener("click", closeMenu);
-          var panel = document.createElement("nav");
-          panel.setAttribute("aria-label", "Menu");
-          panel.style.cssText =
-            "position:absolute;top:0;right:0;bottom:0;width:84%;max-width:340px;background:#fff;color:#111;padding:18px 22px;box-shadow:-8px 0 32px rgba(0,0,0,.28);overflow-y:auto;display:flex;flex-direction:column;gap:2px;";
-          var x = document.createElement("button");
-          x.setAttribute("aria-label", "Fermer");
-          x.innerHTML = "&times;";
-          x.style.cssText =
-            "align-self:flex-end;background:none;border:0;font-size:34px;line-height:1;color:#111;cursor:pointer;padding:2px 6px 10px;";
-          x.addEventListener("click", closeMenu);
-          panel.appendChild(x);
-          links.forEach(function (l) {
-            var a = document.createElement("a");
-            a.href = l.href;
-            a.textContent = l.label;
-            a.style.cssText =
-              "display:block;padding:14px 4px;font-size:18px;font-weight:500;color:#111;text-decoration:none;border-bottom:1px solid #ececec;";
-            a.addEventListener("click", closeMenu);
-            panel.appendChild(a);
-          });
-          ov.appendChild(back);
-          ov.appendChild(panel);
-          document.body.appendChild(ov);
-          return true;
-        }
-        function findHamburger() {
-          var hits = [];
-          document.querySelectorAll("header, nav").forEach(function (scope) {
-            scope
-              .querySelectorAll('[class*="lg:hidden"], [class*="md:hidden"]')
-              .forEach(function (c) {
-                var svgs = c.querySelectorAll("svg");
-                if (svgs.length) hits.push(svgs[svgs.length - 1].closest("button, a") || svgs[svgs.length - 1]);
-              });
-          });
-          return hits;
-        }
-        function injectHamburger() {
-          var host =
-            document.querySelector("header nav") ||
-            document.querySelector("header") ||
-            document.querySelector("nav");
-          if (!host) return false;
-          var btn = document.createElement("button");
-          btn.id = "kleap-burger";
-          btn.className = "lg:hidden"; // reuse the app's Tailwind: hidden ≥ lg
-          btn.setAttribute("aria-label", "Menu");
-          btn.style.cssText =
-            "position:fixed;top:14px;right:14px;z-index:2147483500;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.92);border:1px solid rgba(0,0,0,.08);border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.12);cursor:pointer;";
-          btn.innerHTML =
-            '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
-          document.body.appendChild(btn);
-          return true;
-        }
-        function visibleNavCount(scope) {
-          if (!scope) return 0;
-          var n = 0;
-          scope.querySelectorAll("a[href]").forEach(function (a) {
-            var label = (a.textContent || "").replace(/\s+/g, " ").trim();
-            if (!label || label.length < 2) return;
-            if (a.querySelector("img, svg") && label.length < 3) return; // logo
-            var r = a.getBoundingClientRect();
-            if (a.offsetParent !== null && r.width > 0 && r.left < window.innerWidth) n++;
-          });
-          return n;
-        }
-        function setup() {
-          var scope = navScope();
-          if (!scope) return;
-          var links = collectLinks(scope);
-          if (links.length < 2) return; // nothing to put in a menu
-          if (visibleNavCount(scope) >= links.length) return; // ALL links already inline → no menu needed
-          if (!ensureDrawer()) return;
-          var burgers = findHamburger();
-          if (!burgers.length) {
-            var existing = document.getElementById("kleap-burger");
-            if (!existing) injectHamburger();
-            burgers = [document.getElementById("kleap-burger")].filter(Boolean);
-          }
-          burgers.forEach(function (trig) {
-            if (!trig || trig.__kmWired) return;
-            trig.__kmWired = true;
-            trig.style.cursor = "pointer";
-            trig.addEventListener("click", function (e) {
-              e.preventDefault();
-              e.stopPropagation();
-              openMenu();
+        // GSAP Scroll Reveal Animations
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.utils.toArray("[data-reveal]").forEach(function (el) {
+            gsap.from(el, { 
+                y: 50, 
+                opacity: 0, 
+                duration: 1, 
+                ease: "power3.out",
+                scrollTrigger: { trigger: el, start: "top 85%" } 
             });
-          });
-        }
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape") closeMenu();
         });
-        document.addEventListener("DOMContentLoaded", setup);
-        document.addEventListener("astro:page-load", setup);
-        if (document.readyState !== "loading") setup();
-      })();
-    </script><meta property="og:title" content="SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai"><meta property="og:description" content="SmooTheory is Navi Mumbai&#39;s most aesthetic smoothie, bowl and waffle café in Kopar Khairane. Fresh blends, picture-perfect bowls, and chill vibes — open daily."><meta property="og:type" content="website"><meta property="og:url" content="https://smootheory.kleap.io/"><meta property="og:site_name" content="SmooTheory"><meta property="og:image" content="https://kleap.co/api/og-image/32106"><meta property="og:image:alt" content="SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://kleap.co/api/og-image/32106"><meta name="twitter:title" content="SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai"><meta name="twitter:description" content="SmooTheory is Navi Mumbai&#39;s most aesthetic smoothie, bowl and waffle café in Kopar Khairane. Fresh blends, picture-perfect bowls, and chill vibes — open daily."><script type="application/ld+json" data-astro-exec="">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"SmooTheory","url":"https://smootheory.kleap.io/"},{"@type":"WebPage","name":"SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai","description":"SmooTheory is Navi Mumbai's most aesthetic smoothie, bowl and waffle café in Kopar Khairane. Fresh blends, picture-perfect bowls, and chill vibes — open daily.","url":"https://smootheory.kleap.io/","dateModified":"2026-06-30T16:09:27.359Z"},{"@type":"CafeOrCoffeeShop","name":"SmooTheory","telephone":"+91-91368-77407","address":{"@type":"PostalAddress","streetAddress":"Fam Society, Kopar Khairane","addressLocality":"Navi Mumbai","addressRegion":"MH","postalCode":"400709","addressCountry":"IN"},"servesCuisine":["Smoothies","Smoothie Bowls","Waffles","Coffee"],"priceRange":"₹"}]}</script><link rel="stylesheet" href="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/index.DZ3FLm5v.css">
-
-<script src="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/_kleap.js.download" data-astro-exec=""></script>
-<script data-astro-exec="">
-(function(){
-  "use strict";
-  // Lire l'ID depuis _kleap.js local, puis fetch config dynamique depuis API
-  function waitForConfig(cb,a){a=a||0;if(window._kleap&&window._kleap.id){cb();}else if(a<50){setTimeout(function(){waitForConfig(cb,a+1);},100);}}
-  waitForConfig(function(){
-    var appId=window._kleap.id;
-    // Fetch config dynamique depuis l'API Kleap (permet changements sans redeploy)
-    fetch("https://kleap.co/api/public/apps/"+appId+"/config")
-      .then(function(r){return r.json();})
-      .then(function(c){
-        // Badge
-        if(c.badge&&!document.querySelector("[data-kleap-badge]")){
-          var b=document.createElement("div");
-          b.setAttribute("data-kleap-badge","true");
-          b.style.cssText="position:fixed;bottom:20px;right:20px;z-index:999999;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;";
-          var l=document.createElement("a");
-          l.href="https://kleap.co/made-with-kleap?utm_source=badge&utm_medium=built-with&utm_campaign=app-"+appId+"&ref="+appId;
-          l.target="_blank";l.rel="noopener";l.title="Made with Kleap";l.setAttribute("aria-label","Made with Kleap");
-          l.style.cssText="display:inline-flex;align-items:center;gap:4px;padding:8px 12px;background:white;color:#000;text-decoration:none;font-size:14px;font-weight:500;border-radius:6px;box-shadow:0 0 0 1px rgba(0,0,0,0.08),0 2px 8px rgba(0,0,0,0.12);transition:all 0.15s ease;";
-          l.innerHTML='Made with <strong style="color:#ff0055;">Kleap</strong>';
-          l.onmouseenter=function(){this.style.transform="translateY(-2px)";this.style.boxShadow="0 0 0 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.08)";};
-          l.onmouseleave=function(){this.style.transform="translateY(0)";this.style.boxShadow="0 0 0 1px rgba(0,0,0,0.1),0 2px 4px rgba(0,0,0,0.05)";};
-          b.appendChild(l);document.body.appendChild(b);
-        } else if(c.badge===false) {
-          var existing=document.querySelector("[data-kleap-badge]");
-          if(existing&&existing.parentNode) existing.parentNode.removeChild(existing);
-        }
-        // Analytics
-        if(c.analytics&&!document.querySelector('[data-website-id="'+c.analytics+'"]')){
-          var s=document.createElement("script");s.async=true;s.defer=true;
-          s.src=(c.umami_url||"https://analytics-v2.kleap.co")+"/script.js";
-          s.setAttribute("data-website-id",c.analytics);
-          document.head.appendChild(s);
-        }
-      })
-      .catch(function(){/* Silently fail if API unavailable */});
-  });
-})();
-</script>
-
-<meta name="kleap-deploy" content="kdvmr0uduars2nh2nji"><style id="kleap-failopen">body{opacity:1 !important;transition:none !important}</style><script src="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/lenis.min.js.download"></script><script async="" defer="" src="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/script.js.download" data-website-id="4fa9d090-59c8-49dc-898f-cd93183d921b"></script></head> <body class="min-h-screen bg-background text-foreground antialiased">
-<div data-kleap-badge="true" style="position:fixed;bottom:20px;right:20px;z-index:999999;font-family:-apple-system,BlinkMacSystemFont,&#39;Segoe UI&#39;,system-ui,sans-serif;"></div>  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[var(--background)]/70 border-b border-[var(--border)]"> <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"> <a href="https://smootheory.kleap.io/" class="flex items-center gap-2"> <span class="w-8 h-8 rounded-full bg-gradient-to-br from-[var(--brand)] to-[var(--accent-color)] flex items-center justify-center text-[var(--background)] font-black">S</span> <span class="font-black text-xl tracking-tight text-[var(--foreground)]">Smoo<span class="text-[var(--accent-color)]">Theory</span></span> </a> <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-[var(--foreground)]"> <a href="https://smootheory.kleap.io/#menu" class="hover:text-[var(--accent-color)] transition">Menu</a> <a href="https://smootheory.kleap.io/#story" class="hover:text-[var(--accent-color)] transition">Story</a> <a href="https://smootheory.kleap.io/#visit" class="hover:text-[var(--accent-color)] transition">Visit</a> </nav> <a href="tel:+919136877407" class="hidden md:inline-block px-4 py-2 rounded-full bg-emerald-500 text-white text-sm font-bold hover:scale-105 transition">Call to Order</a> <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu"> <span class="w-6 h-0.5 bg-[var(--foreground)] transition-all"></span> <span class="w-6 h-0.5 bg-[var(--foreground)] transition-all"></span> <span class="w-6 h-0.5 bg-[var(--foreground)] transition-all"></span> </button> </div> <div id="mobile-menu" class="md:hidden hidden border-t border-[var(--border)] bg-[var(--background)]/95 backdrop-blur-xl"> <nav class="flex flex-col px-6 py-4 gap-4 text-base font-medium text-[var(--foreground)]"> <a href="https://smootheory.kleap.io/#menu" class="mobile-link hover:text-[var(--accent-color)] transition">Menu</a> <a href="https://smootheory.kleap.io/#story" class="mobile-link hover:text-[var(--accent-color)] transition">Story</a> <a href="https://smootheory.kleap.io/#visit" class="mobile-link hover:text-[var(--accent-color)] transition">Visit</a> <a href="tel:+919136877407" class="mobile-link px-4 py-2 rounded-full bg-emerald-500 text-white text-center font-bold">Call to Order</a> </nav> </div> </header> <main class="pt-16">  <section class="relative overflow-hidden min-h-[90vh] flex items-center" data-reveal="" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"> <div class="absolute inset-0 bg-gradient-to-br from-[var(--brand-dark)] via-[var(--background)] to-[var(--background)]"></div> <div class="absolute -top-20 -right-20 w-96 h-96 bg-[var(--brand)]/30 rounded-full blur-3xl"></div> <div class="absolute bottom-0 -left-20 w-96 h-96 bg-[var(--accent-color)]/20 rounded-full blur-3xl"></div> <div class="relative max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center"> <div> <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur border border-white/20 mb-6"> <span class="w-2 h-2 rounded-full bg-[var(--accent-color)] animate-pulse"></span> <span class="text-xs font-bold text-white uppercase tracking-widest">Now Open · Kopar Khairane</span> </div> <h1 class="text-6xl md:text-8xl font-black tracking-tighter text-[var(--foreground)] leading-[0.95]">
-Chill.<br>Blend.<br><span class="text-[var(--accent-color)]">Repeat.</span> </h1> <p class="mt-6 text-lg md:text-xl text-white/80 max-w-lg leading-relaxed">
-Navi Mumbai's most aesthetic spot for hand-crafted smoothies, picture-perfect bowls, and the city's best strawberry coffee.
-</p> <div class="mt-8 flex flex-wrap gap-4"> <a href="https://smootheory.kleap.io/#menu" class="px-7 py-4 rounded-full bg-emerald-500 text-white font-bold hover:scale-105 transition shadow-lg shadow-emerald-500/20">
-See the Menu
-</a> <a href="https://smootheory.kleap.io/#visit" class="px-7 py-4 rounded-full border border-[var(--border)] bg-[var(--card)] text-[var(--foreground)] font-bold hover:bg-[var(--secondary)] transition">
-Find Us
-</a> </div> <div class="mt-10 flex gap-8 text-sm"> <div> <div class="text-2xl font-black text-[var(--foreground)]">4.8★</div> <div class="text-[var(--muted-foreground)]">Google Rating</div> </div> <div> <div class="text-2xl font-black text-[var(--foreground)]">30+</div> <div class="text-[var(--muted-foreground)]">Signature Blends</div> </div> <div> <div class="text-2xl font-black text-[var(--foreground)]">100%</div> <div class="text-[var(--muted-foreground)]">Real Fruit</div> </div> </div> </div> <div class="relative"> <div class="aspect-square rounded-[3rem] overflow-hidden bg-gradient-to-br from-[var(--brand)] to-[var(--accent-color)] p-2 shadow-2xl"> <img src="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/photo-1623065422902-30a2d299bbe4" alt="Colorful smoothie bowl at SmooTheory" class="w-full h-full object-cover rounded-[2.6rem]"> </div> <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl p-4 shadow-2xl"> <div class="text-xs text-gray-500 uppercase tracking-widest font-bold">Today's Pick</div> <div class="font-black text-lg text-gray-900">Strawberry Coffee</div> <div class="text-sm text-emerald-600 font-bold">★ Customer Fave</div> </div> <div class="absolute -top-4 -left-4 w-24 h-24 rounded-full bg-emerald-400 flex items-center justify-center text-white font-black text-sm shadow-xl rotate-12">
-FRESH<br>DAILY
-</div> </div> </div> </section>  <section id="menu" class="py-24 md:py-32 px-6" data-reveal="" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"> <div class="max-w-7xl mx-auto"> <div class="text-center mb-16"> <p class="text-[var(--accent-color)] font-bold uppercase tracking-widest text-sm mb-3">Our Menu</p> <h2 class="text-5xl md:text-7xl font-black tracking-tighter text-[var(--foreground)]">Made to glow.</h2> <p class="mt-4 text-[var(--muted-foreground)] max-w-2xl mx-auto">Real fruit. Honest ingredients. Every cup and bowl blended fresh, the moment you order.</p> </div> <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5"> <article class="group bg-[var(--card)] border border-[var(--border)] rounded-3xl overflow-hidden hover:scale-[1.02] transition"> <img src="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/photo-1505252585461-04db1eb84625" alt="Smoothies" class="w-full h-44 object-cover"> <div class="p-6"> <h3 class="text-xl font-black text-[var(--foreground)] mb-1">Smoothies</h3> <p class="text-sm text-[var(--muted-foreground)]">Tropical, berry, avocado-honey-date — blended thick &amp; icy.</p> <div class="mt-4 text-[var(--accent-color)] font-bold">From ₹149 →</div> </div> </article> <article class="group bg-[var(--card)] border border-[var(--border)] rounded-3xl overflow-hidden hover:scale-[1.02] transition"> <img src="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/pexels-photo-7937047.jpg" alt="Smoothie Bowls" class="w-full h-44 object-cover"> <div class="p-6"> <h3 class="text-xl font-black text-[var(--foreground)] mb-1">Smoothie Bowls</h3> <p class="text-sm text-[var(--muted-foreground)]">Granola, seeds, fresh fruit, cacao — the gram-worthy plate.</p> <div class="mt-4 text-[var(--accent-color)] font-bold">From ₹229 →</div> </div> </article> <article class="group bg-[var(--card)] border border-[var(--border)] rounded-3xl overflow-hidden hover:scale-[1.02] transition"> <img src="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/photo-1551782450-a2132b4ba21d" alt="Coffee &amp; Drinks" class="w-full h-44 object-cover"> <div class="p-6"> <h3 class="text-xl font-black text-[var(--foreground)] mb-1">Coffee &amp; More</h3> <p class="text-sm text-[var(--muted-foreground)]">From iced strawberry coffee to classic cold brews &amp; shakes.</p> <div class="mt-4 text-[var(--accent-color)] font-bold">From ₹99 →</div> </div> </article> <article class="group bg-[var(--card)] border border-[var(--border)] rounded-3xl overflow-hidden hover:scale-[1.02] transition"> <img src="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/photo-1562376552-0d160a2f238d" alt="Waffles &amp; Treats" class="w-full h-44 object-cover"> <div class="p-6"> <h3 class="text-xl font-black text-[var(--foreground)] mb-1">Waffles &amp; Treats</h3> <p class="text-sm text-[var(--muted-foreground)]">Crispy Belgian waffles, donuts and protein-packed bites.</p> <div class="mt-4 text-[var(--accent-color)] font-bold">From ₹179 →</div> </div> </article> </div> </div> </section>  <section id="story" class="py-24 md:py-32 px-6 bg-[var(--card)]" data-reveal="" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"> <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"> <div class="rounded-3xl overflow-hidden aspect-square"> <img src="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/photo-1551024506-0bccd828d307" alt="Inside SmooTheory café" class="w-full h-full object-cover"> </div> <div> <p class="text-[var(--accent-color)] font-bold uppercase tracking-widest text-sm mb-3">Why SmooTheory</p> <h2 class="text-4xl md:text-6xl font-black tracking-tighter text-[var(--foreground)] mb-6">Navi Mumbai's most aesthetic café — and it tastes as good as it looks.</h2> <p class="text-[var(--muted-foreground)] leading-relaxed mb-6">
-We started SmooTheory with one belief: healthy food shouldn't be boring, and pretty food shouldn't taste like nothing. Every smoothie is blended to order with whole fruits, real nut butters, and zero syrup shortcuts.
-</p> <ul class="space-y-3"> <li class="flex items-center gap-3 text-[var(--foreground)]"> <span class="w-6 h-6 rounded-full bg-[var(--accent-color)] flex items-center justify-center text-[var(--accent-foreground)] text-xs font-black">✓</span> Farm-fresh fruit, no concentrates </li><li class="flex items-center gap-3 text-[var(--foreground)]"> <span class="w-6 h-6 rounded-full bg-[var(--accent-color)] flex items-center justify-center text-[var(--accent-foreground)] text-xs font-black">✓</span> Hand-topped bowls, never pre-made </li><li class="flex items-center gap-3 text-[var(--foreground)]"> <span class="w-6 h-6 rounded-full bg-[var(--accent-color)] flex items-center justify-center text-[var(--accent-foreground)] text-xs font-black">✓</span> Cozy interiors built for hangouts </li><li class="flex items-center gap-3 text-[var(--foreground)]"> <span class="w-6 h-6 rounded-full bg-[var(--accent-color)] flex items-center justify-center text-[var(--accent-foreground)] text-xs font-black">✓</span> Order on Zomato or walk right in </li> </ul> </div> </div> </section>  <section id="visit" class="py-24 md:py-32 px-6" data-reveal="" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"> <div class="max-w-5xl mx-auto bg-gradient-to-br from-[var(--brand)] to-[var(--brand-dark)] rounded-[3rem] p-10 md:p-16 relative overflow-hidden"> <div class="absolute top-0 right-0 w-72 h-72 bg-[var(--accent-color)]/30 rounded-full blur-3xl"></div> <div class="relative grid md:grid-cols-2 gap-10 items-center"> <div> <p class="text-[var(--foreground)] font-bold uppercase tracking-widest text-sm mb-3">Come Say Hi</p> <h2 class="text-4xl md:text-6xl font-black tracking-tighter text-white mb-6">Find us in Kopar Khairane.</h2> <div class="space-y-4 text-white/90"> <div class="flex items-start gap-3"> <span class="text-xl">📍</span> <div><strong>Fam Society</strong><br>Kopar Khairane<br>Navi Mumbai, Maharashtra 400709</div> </div> <div class="flex items-center gap-3"> <span class="text-xl">📞</span> <a href="tel:+919136877407" class="font-bold hover:text-[var(--accent-color)] transition">+91 91368 77407</a> </div> <div class="flex items-center gap-3"> <span class="text-xl">⏰</span> <div>Open daily · Order on Zomato, Swiggy &amp; in-store</div> </div> </div> <div class="mt-8 flex flex-wrap gap-3"> <a href="https://www.zomato.com/mumbai/smooTheory" target="_blank" class="px-5 py-3 rounded-full bg-white text-[#047857] font-bold text-sm hover:scale-105 transition">Order on Zomato →</a> <a href="https://www.instagram.com/smootheory._/" target="_blank" class="px-5 py-3 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white font-bold text-sm hover:bg-white/20 transition">@smootheory._</a> </div> </div> <div class="rounded-3xl overflow-hidden aspect-square border-4 border-white/10"> <img src="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/photo-1453614512568-c4024d13c247" alt="Healthy café vibes" class="w-full h-full object-cover"> </div> </div> </div> </section> <footer class="border-t border-[var(--border)] py-10 px-6"> <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4"> <div class="flex items-center gap-2"> <span class="w-7 h-7 rounded-full bg-gradient-to-br from-[var(--brand)] to-[var(--accent-color)] flex items-center justify-center text-[var(--background)] font-black text-xs">S</span> <span class="font-black text-[var(--foreground)]">SmooTheory</span> </div> <div class="text-[var(--muted-foreground)] text-sm">© 2026 SmooTheory · Kopar Khairane, Navi Mumbai · Made with ❤ and real fruit</div> </div> </footer> </main> <script src="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/gsap.min.js.download" data-astro-exec=""></script> <script src="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/ScrollTrigger.min.js.download" data-astro-exec=""></script> <script data-astro-exec="">
-    document.addEventListener("astro:page-load", function () {
-      var toggle = document.getElementById("menu-toggle");
-      var menu = document.getElementById("mobile-menu");
-      if (toggle && menu) {
-        toggle.addEventListener("click", function () { menu.classList.toggle("hidden"); });
-        document.querySelectorAll(".mobile-link").forEach(function (link) {
-          link.addEventListener("click", function () { menu.classList.add("hidden"); });
-        });
-      }
-      if (matchMedia("(prefers-reduced-motion: reduce)").matches || !window.gsap || !window.ScrollTrigger) return;
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.utils.toArray("[data-reveal]").forEach(function (el) {
-        gsap.from(el, { y: 60, opacity: 0, duration: 1, ease: "power3.out",
-          scrollTrigger: { trigger: el, start: "top 85%" } });
-      });
-    });
-  </script>  <script data-astro-exec="">
-(function(){var S='[class*="animate-fade"],[class*="animate-in"],[class*="animate-slide"],[class*="animate-zoom"],[data-reveal]';function skip(el){for(var n=el;n&&n!==document.body;n=n.parentElement){if(n.nodeType!==1)continue;var cs=getComputedStyle(n);if(cs.display==="none"||cs.visibility==="hidden")return true;if(n.getAttribute("aria-hidden")==="true"||n.hasAttribute("hidden")||n.getAttribute("data-state")==="closed"||n.getAttribute("aria-expanded")==="false")return true;}var c=getComputedStyle(el);if(c.position==="absolute"||c.position==="fixed"){var p=el.parentElement;if(p){var ch=p.children;for(var i=0;i<ch.length;i++){var sib=ch[i];if(sib!==el){var sc=getComputedStyle(sib);if((sc.position==="absolute"||sc.position==="fixed")&&parseFloat(sc.opacity)>=0.99)return true;}}}}return false;}function show(el){try{if(!skip(el)&&parseFloat(getComputedStyle(el).opacity)<0.99){el.style.opacity="1";el.style.transform="none";}}catch(e){}}function run(){var els=[].slice.call(document.querySelectorAll(S));if(!els.length)return;if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});},{rootMargin:"0px 0px -8% 0px"});els.forEach(function(el){io.observe(el);});}setTimeout(function(){els.forEach(show);},2500);}if(document.readyState!=="loading")run();else document.addEventListener("DOMContentLoaded",run);})();
-</script> <script defer="" src="./SmooTheory — Aesthetic Smoothie Café in Kopar Khairane, Navi Mumbai_files/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;29dbd2987b31450a84069cf67fe901d3&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous" data-astro-exec=""></script>
- </body></html>
+    </script>
+</body>
+</html>
